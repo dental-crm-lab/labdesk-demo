@@ -1,0 +1,48 @@
+{
+  "name": "labdesk-desktop",
+  "version": "1.0.0",
+  "description": "LabDesk — настольное приложение (обёртка над веб-версией)",
+  "main": "main.js",
+  "author": "LabDesk",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win --x64"
+  },
+  "devDependencies": {
+    "electron": "^31.3.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.labdesk.desktop",
+    "productName": "LabDesk",
+    "copyright": "LabDesk",
+    "directories": { "output": "dist" },
+    "publish": null,
+    "files": ["main.js", "preload.js", "config.html", "icon.png", "icon.ico"],
+    "win": {
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "LabDesk",
+      "menuCategory": false,
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "artifactName": "LabDesk-Setup-${version}.exe"
+    },
+    "portable": {
+      "artifactName": "LabDesk-Portable-${version}.exe"
+    }
+  }
+}
