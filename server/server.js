@@ -113,6 +113,6 @@ res.sendFile(path.join(PUBLIC_DIR, 'index.html'));
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, '0.0.0.0', () => {
-console.log('LabDesk server listening on port ' + PORT);
+console.log('MedLab server listening on port ' + PORT);
 console.log('Data dir: ' + store.DATA_DIR);
 });

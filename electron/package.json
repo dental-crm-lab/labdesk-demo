@@ -1,9 +1,9 @@
 {
-  "name": "labdesk-desktop",
+  "name": "medlab-desktop",
   "version": "1.0.0",
-  "description": "LabDesk — настольное приложение (обёртка над веб-версией)",
+  "description": "MedLab — настольное приложение (обёртка над веб-версией)",
   "main": "main.js",
-  "author": "LabDesk",
+  "author": "MedLab",
   "private": true,
   "scripts": {
     "start": "electron .",
@@ -14,9 +14,9 @@
     "electron-builder": "^24.13.3"
   },
   "build": {
-    "appId": "com.labdesk.desktop",
-    "productName": "LabDesk",
-    "copyright": "LabDesk",
+    "appId": "com.medlab.desktop",
+    "productName": "MedLab",
+    "copyright": "MedLab",
     "directories": { "output": "dist" },
     "publish": null,
     "files": ["main.js", "preload.js", "config.html", "icon.png", "icon.ico"],
@@ -33,16 +33,16 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "LabDesk",
+      "shortcutName": "MedLab",
       "menuCategory": false,
       "runAfterFinish": true,
       "deleteAppDataOnUninstall": false,
       "installerIcon": "icon.ico",
       "uninstallerIcon": "icon.ico",
-      "artifactName": "LabDesk-Setup-${version}.exe"
+      "artifactName": "MedLab-Setup-${version}.exe"
     },
     "portable": {
-      "artifactName": "LabDesk-Portable-${version}.exe"
+      "artifactName": "MedLab-Portable-${version}.exe"
     }
   }
 }

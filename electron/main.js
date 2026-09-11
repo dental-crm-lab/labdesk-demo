@@ -25,7 +25,7 @@ function createWindow() {
     height: 920,
     minWidth: 980,
     minHeight: 640,
-    title: 'LabDesk',
+    title: 'MedLab',
     icon: path.join(__dirname, 'icon.png'),
     backgroundColor: '#F2F4F5',
     webPreferences: {
@@ -49,7 +49,7 @@ function createWindow() {
 
   const menu = Menu.buildFromTemplate([
     {
-      label: 'LabDesk',
+      label: 'MedLab',
       submenu: [
         {
           label: 'Сменить адрес сервера…',

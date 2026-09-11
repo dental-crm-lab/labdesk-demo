@@ -1,6 +1,6 @@
 {
-  "name": "LabDesk — CAD-CAM учёт заказов",
-  "short_name": "LabDesk",
+  "name": "MedLab — CAD-CAM учёт заказов",
+  "short_name": "MedLab",
   "description": "Доска заказов, приём заявок от врачей и финансовый учёт для CAD-CAM лаборатории.",
   "start_url": "/",
   "scope": "/",

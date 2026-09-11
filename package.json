@@ -1,7 +1,7 @@
 {
-  "name": "labdesk-demo",
+  "name": "medlab-demo",
   "version": "1.0.0",
-  "description": "LabDesk — CAD-CAM dental lab CRM demo: order board, doctor intake, and finance tracking",
+  "description": "MedLab — CAD-CAM dental lab CRM demo: order board, doctor intake, and finance tracking",
   "private": true,
   "main": "server/server.js",
   "scripts": {

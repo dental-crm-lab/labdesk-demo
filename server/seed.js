@@ -2,7 +2,7 @@
 const store = require('./store');
 
 const DEFAULT_CONFIG = {
-  labName: 'LabDesk',
+  labName: 'MedLab',
   stages: ['Новый', 'Дизайн (CAD)', 'Фрезеровка / Печать', 'Спекание / Обработка', 'Готово', 'Выдан'],
   deadlineTiers: [
     { maxUnits: 7, days: 4 },

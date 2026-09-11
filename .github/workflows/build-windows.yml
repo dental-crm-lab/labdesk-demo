@@ -22,7 +22,7 @@ jobs:
         run: npm run dist:win
       - uses: actions/upload-artifact@v4
         with:
-          name: LabDesk-Windows
+          name: MedLab-Windows
           path: |
             electron/dist/*.exe
           retention-days: 90

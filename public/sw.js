@@ -1,7 +1,7 @@
-// LabDesk — minimal app-shell service worker.
+// MedLab — minimal app-shell service worker.
 // Caches the static shell so the app opens instantly / offline-tolerant for
 // the UI chrome; all data (API + Socket.IO) always goes to the network.
-const CACHE = 'labdesk-shell-v1';
+const CACHE = 'medlab-shell-v1';
 const SHELL = ['/', '/manifest.json'];
 
 self.addEventListener('install', (event) => {
@@ -17,16 +17,16 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('push', (event) => {
-  let payload = { title: 'LabDesk', body: '' };
+  let payload = { title: 'MedLab', body: '' };
   try { if (event.data) payload = Object.assign(payload, event.data.json()); } catch (e) {}
   const options = {
     body: payload.body || '',
     icon: '/icons/icon-192.png',
     badge: '/icons/icon-192.png',
-    tag: payload.tag || 'labdesk',
+    tag: payload.tag || 'medlab',
     data: { url: payload.url || '/' }
   };
-  event.waitUntil(self.registration.showNotification(payload.title || 'LabDesk', options).catch(() => {}));
+  event.waitUntil(self.registration.showNotification(payload.title || 'MedLab', options).catch(() => {}));
 });
 
 self.addEventListener('notificationclick', (event) => {

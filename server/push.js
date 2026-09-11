@@ -22,7 +22,7 @@ function ensureVapid() {
     doc = { publicKey: keys.publicKey, privateKey: keys.privateKey };
     store.setDoc('settings/vapid', doc);
   }
-  const subject = process.env.VAPID_SUBJECT || 'mailto:labdesk@example.com';
+  const subject = process.env.VAPID_SUBJECT || 'mailto:medlab@example.com';
   webpush.setVapidDetails(subject, doc.publicKey, doc.privateKey);
   vapidReady = true;
 }
